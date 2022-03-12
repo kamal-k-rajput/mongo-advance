@@ -1,0 +1,26 @@
+db.movie.count()
+db.movie.find({"movie_name":{$eq:"Denny"}}).pretty()
+db.movie.find({"movie_name":{$ne:"Denny"}}).pretty()
+> db.movie.find({"budget":{$gt:10000}}).pretty()
+> db.movie.find({"budget":{$gte:10000}}).pretty()
+> db.movie.find({"budget":{$lt:10000}}).pretty()
+> db.movie.find({"budget":{$lte:10000}}).pretty()
+> db.movie.find({$and:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+> db.movie.find({$or:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+> db.movie.find({$nor:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+> db.movie.find({$or:[{"production_year":{$ne:2000}},{"budget":{$lt:10000}}]}).pretty()
+> db.movie.find({$and:[{"production_year":{$gte:2000}},{"production_year":{$lte:2010}}]}).pretty()
+> db.movie.find({}).sort({production_year:-1,movie_name:1}).pretty()
+> db.movie.find({}).skip(10).limit(5).pretty()
+
+
+
+
+
+
+
+
+
+
+
+
